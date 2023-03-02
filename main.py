@@ -31,11 +31,34 @@ def triangle(x, y, a, b, angle, color):
     :param color:
     :return: None
     '''
+    import turtle
+
     pass
 
 
-def draw_dog():
-    '''Drawing big dog. Rrrrrr!   Gav'''
+def draw_pear(x, y, color, border):
+    '''
+
+    :param x:
+    :param y:
+    :param color:
+    :param border:
+    :return: None
+    '''
+    from turtle import *
+    color("greenyellow", "yellow")  # цвет рисования и цвет заливки
+    bgcolor("blue")  # цвет фона
+    pensize(5)  # размер пера
+    begin_fill()  # начало заливки
+    pd()  # опустить перо
+    fd(100)  # идти вперед
+    rt(90)  # повернуть вправо на угол
+    fd(100)
+    rt(90)
+    fd(100)
+    rt(90)
+    fd(100)
+    rt(90)
 
     pass
 
