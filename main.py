@@ -6,6 +6,21 @@ Rafaevich Vita
 Leonov Kirill
 '''
 
+#divide into 3 parts
+
+import turtle
+turtle.pensize(5)
+turtle.pu()
+turtle.goto(-134,-400)
+turtle.pd()
+turtle.lt(90)
+turtle.fd(800)
+turtle.pu()
+turtle.goto(133,-400)
+turtle.pd()
+turtle.fd(800)
+turtle.pu()
+turtle.done()
 def triangle(x, y, a, b, angle, color):
     '''
     Function for drawing triangle.
