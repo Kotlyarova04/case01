@@ -1,6 +1,5 @@
 '''
-
-Group:
+Dreamteam:
 Kotlyarova Polina
 Rafaevich Vita
 Leonov Kirill
