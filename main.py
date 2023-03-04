@@ -19,21 +19,17 @@ turtle.goto(133,-400)
 turtle.pd()
 turtle.fd(800)
 turtle.pu()
-turtle.done()
-def triangle(x, y, a, b, angle, color):
-    '''
-    Function for drawing triangle.
-    :param x:
-    :param y:
-    :param a:
-    :param b:
-    :param angle:
-    :param color:
-    :return: None
-    '''
-    import turtle
 
-    pass
+# Part of Kirill
+import lines
+turtle.goto(-267,0)
+turtle.pd()
+lines.square(50)
+turtle.done()
+
+# Part of Polina
+
+# Part of Vita
 
 
 def draw_pear(x, y, color, border):
@@ -45,7 +41,7 @@ def draw_pear(x, y, color, border):
     :param border:
     :return: None
     '''
-    from turtle import *
+
     color("greenyellow", "yellow")  # цвет рисования и цвет заливки
     bgcolor("blue")  # цвет фона
     pensize(5)  # размер пера
