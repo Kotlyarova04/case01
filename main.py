@@ -8,23 +8,25 @@ Leonov Kirill
 #divide into 3 parts
 
 import turtle
+turtle.setup(width=1.0,height=1.0)
 turtle.pensize(5)
 turtle.pu()
-turtle.goto(-134,-400)
+turtle.goto(-255,-400)
 turtle.pd()
 turtle.lt(90)
-turtle.fd(800)
+turtle.fd(820)
 turtle.pu()
-turtle.goto(133,-400)
+turtle.goto(255,-400)
 turtle.pd()
-turtle.fd(800)
+turtle.fd(820)
 turtle.pu()
 
 # Part of Kirill
-import lines
-turtle.goto(-267,0)
+import kirill
+turtle.goto(-350,0)
+turtle.pensize(2)
 turtle.pd()
-lines.square(50)
+kirill.square(50)
 turtle.done()
 
 # Part of Polina
