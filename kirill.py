@@ -22,7 +22,7 @@ def square(x):
         turtle.fd(x)
         turtle.rt(90)
 
-def ellipsoid_hor(bigrad,littlerad,deg):
+def ellipsoid(bigrad,littlerad,deg):
     '''
     This function draws an ellips.
     :param bigrad: radius along the OX axis
@@ -36,22 +36,6 @@ def ellipsoid_hor(bigrad,littlerad,deg):
         rad = math.radians(i)
         x = bigrad * math.sin(rad) + dx
         y = -littlerad * math.cos(rad) + littlerad + dy
-        turtle.goto(x,y)
-
-def ellipsoid_vert(bigrad,littlerad,deg):
-    '''
-    This function draws an ellips.
-    :param bigrad: radius along the OX axis
-    :param littlerad: radius along the OY axis
-    :param deg: ellipse sector angle (=360 if we want to draw a full ellipse)
-    :return: None
-    '''
-    dx = turtle.xcor()
-    dy = turtle.ycor()
-    for i in range(deg):
-        rad = math.radians(i)
-        y = bigrad * math.sin(rad) + dy
-        x = -littlerad * math.cos(rad) + littlerad + dx
         turtle.goto(x,y)
 
 bigrad, littlerad = 60, 30
@@ -73,7 +57,7 @@ turtle.goto(turtle.xcor() - bigrad,turtle.ycor() - littlerad)
 turtle.pd()
 
 
-ellipsoid_hor(bigrad,littlerad,270)
+ellipsoid(bigrad,littlerad,270)
 turtle.rt(180)
 turtle.fd(littlerad)
 turtle.lt(90)
@@ -83,10 +67,10 @@ turtle.fd(standard//8)
 turtle.rt(90)
 turtle.fd(bigrad + 40)
 turtle.pu()
-turtle.goto(turtle.xcor() + 30,turtle.ycor() - 60)
+turtle.goto(turtle.xcor(),turtle.ycor() - 120)
 turtle.pd()
 
-ellipsoid_vert(bigrad,-littlerad,270)
+ellipsoid(littlerad,bigrad,360)
 turtle.lt(180)
 turtle.fd(standard//8*3)
 turtle.lt(90)
