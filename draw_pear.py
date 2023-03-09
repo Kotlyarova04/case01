@@ -1,6 +1,6 @@
 import turtle as t
 
-t.speed(20)
+t.speed(50)
 if __name__ == '__main__':
     t.setup(width=1.0, height=1.0)
     t.pensize(5)
@@ -99,11 +99,11 @@ def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
 
 def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
     """
-    Function for drawing retangle.
-    :param b:
-    :param x: first coordinate
+    Function for drawing a rectangle.
+    :param x: first coordinate of the start of drawing rectangle
     :param y:
     :param a:
+    :param b:
     :param fillcolor:
     :param pensizee:
     :param pencolour:
@@ -126,7 +126,7 @@ def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
 
 def circlee(x, y, pensizee, r, pencolor, fillcolor):
     """
-
+    This function draws a circle.
     :param y:
     :param x:
     :param pensizee:
