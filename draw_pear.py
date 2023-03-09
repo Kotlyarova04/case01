@@ -188,7 +188,7 @@ def letter(x, y, pensizee, r, pencolor, fillcolor):
     t.lt(180)
 
 
-pear(-3, 70, 5, "greenyellow", "yellow")
+pear(-3, 70, 5, "yellowgreen", "greenyellow")
 rectangle(0, 70, 5, 55, "brown", 3, "brown")
 rhomb(6, 120, 60, 60, "green", 3, "green")
 circlee(-30, -20, 2, 10, "black", "black")
