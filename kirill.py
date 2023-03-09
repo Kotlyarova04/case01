@@ -33,8 +33,19 @@ def ellipsoid(bigrad,littlerad,deg):
         y = -littlerad * math.cos(rad) + littlerad + dy
         turtle.goto(x,y)
 
-def pattern(change1,change2,change3,change4,change5,standard):
+def pattern(change1, change2, change3, change4, change5, standard):
+    '''
+    :param change1:
+    :param change2:
+    :param change3:
+    :param change4:
+    :param change5:
+    :param standard:
+    :return:
+    '''
 
+    turtle.begin_fill()
+    turtle.pd()
     turtle.rt(90)
     turtle.fd(standard)
     turtle.circle(standard//4,90)
@@ -79,8 +90,6 @@ turtle.goto(-550,5)
 turtle.pensize(2)
 turtle.pencolor('Cornflowerblue')
 turtle.fillcolor('Cornflowerblue')
-turtle.begin_fill()
-turtle.pd()
 
 pattern(change1, change2, change3, change4, change5, standard)
 turtle.goto(turtle.xcor() + 75, turtle.ycor() - 95)
@@ -88,7 +97,5 @@ turtle.rt(90)
 
 turtle.pencolor('DarkGoldenrod1')
 turtle.fillcolor('DarkGoldenrod1')
-turtle.begin_fill()
-turtle.pd()
 pattern(-change1, -change2, -change3, -change4, -change5, standard)
 turtle.done()
