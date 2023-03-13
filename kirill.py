@@ -3,7 +3,7 @@ import draw_pear as d
 import math
 if __name__=='__main__':
     t.setup(width=1.0, height=1.0)
-    t.speed(1000)
+    t.speed(50)
     t.pensize(5)
     t.pu()
     t.goto(-255,-400)
@@ -14,6 +14,7 @@ if __name__=='__main__':
     t.goto(255,-400)
     t.pd()
     t.fd(820)
+    t.setheading(0)
     t.pu()
 
 #510 пикселей - одна треть
@@ -37,18 +38,18 @@ def ellipsoid(bigrad,littlerad,deg):
 
 def pattern(change1, change2, change3, change4, change5, standard):
     '''
-    :param change1:
-    :param change2:
-    :param change3:
-    :param change4:
-    :param change5:
-    :param standard:
-    :return:
+    This function draws half of the Python logo, and with opposite (in sign) change-arguments, draws the other half.
+    :param change1: x-radius of ellipse
+    :param change2: y-radius of ellipse
+    :param change3: x-diameter of ellipse
+    :param change4: x-adjustment for drawing a circle
+    :param change5: y-adjustment for drawing a circle
+    :param standard: length of the center line before turns
+    :return: None
     '''
 
     t.begin_fill()
     t.pd()
-    t.rt(90)
     t.fd(standard)
     t.circle(standard//4,90)
     t.fd(standard)
@@ -66,7 +67,7 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.rt(90)
     t.fd(abs(change1) + 40)
     t.pu()
-    t.goto(t.xcor(),t.ycor() - change3)     #120
+    t.goto(t.xcor(),t.ycor() - change3)
     t.pd()
 
     ellipsoid(change2,change1,360)
@@ -78,7 +79,7 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.end_fill()
     t.pu()
 
-    t.goto(t.xcor() + change4,t.ycor() + change5)    #change4, change5 = 5, 85
+    t.goto(t.xcor() + change4,t.ycor() + change5)
     t.pd()
     t.fillcolor('white')
     t.begin_fill()
@@ -96,7 +97,7 @@ if __name__=='__main__':
 
     pattern(change1, change2, change3, change4, change5, standard)
     t.goto(t.xcor() + 75, t.ycor() - 95)
-    t.rt(90)
+    t.setheading(180)
 
     t.pencolor('DarkGoldenrod1')
     t.fillcolor('DarkGoldenrod1')
@@ -104,25 +105,30 @@ if __name__=='__main__':
     t.setheading(0)
     t.pu()
 
+    # letter P
     d.rectangle(-650, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     d.letter(-642, 220, 1, 20, 'DarkGoldenrod1', 'DarkGoldenrod1')
     d.letter(-642, 230, 1, 10, 'white', 'white')
 
+    # letter Y
     d.rectangle(-596, 200, 8, 30, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     t.lt(30)
     d.rectangle(-588, 230, -8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     t.rt(30)
     d.rectangle(-596, 230, 8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
+    # letter T
     d.rectangle(-542, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     t.lt(90)
     d.rectangle(-518, 260, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
+    # letter H
     d.rectangle(-504, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     d.rectangle(-472, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     t.lt(90)
     d.rectangle(-464, 234, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
+    # letter O
     t.goto(-430, 200)
     t.begin_fill()
     t.pd()
@@ -135,6 +141,7 @@ if __name__=='__main__':
     t.end_fill()
     t.pu()
 
+    # letter N
     d.rectangle(-395, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     d.rectangle(-363, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
     t.begin_fill()
