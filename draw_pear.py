@@ -146,7 +146,6 @@ def circlee(x, y, pensizee, r, pencolor, fillcolor):
     t.pu()
     t.end_fill()
 
-
 def smile(x, y, pensizee, r, pencolor):
     """
     :param x:
