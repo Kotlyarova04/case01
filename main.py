@@ -88,6 +88,27 @@ def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
     t.pu()
     t.setheading(0)
 
+def triangle(x, y, a, fillcolor, pensizee, pencolour):
+    """
+    :param x:
+    :param fillcolor:
+    :param pensizee:
+    :param pencolour:
+    :return:
+    """
+    t.pu()
+    t.goto(x, y)
+    t.color(pencolour, fillcolor)
+    t.pensize(pensizee)
+    t.begin_fill()
+    t.pd()
+    for i in range(3):
+        t.fd(a)
+        t.lt(120)
+    t.end_fill()
+    t.pu()
+    t.setheading(0)
+
 def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
     """
     Function for drawing a rectangle.
@@ -345,16 +366,55 @@ rectangle(105, 220, 8, 30, "goldenrod", 5, "goldenrod")
 t.mainloop()
 
 # Part of Vita
+#drawing mountains
+triangle(310, -100, 190, "light blue", 3, "grey")
+triangle(440, -100, 110, "light blue", 3, "grey")
+triangle(500, -100, 220, "light blue", 3, "grey")
+#drawing trees
+circlee(330, -60, 1, 20, "grey", "green")
+rectangle(340, -110, 7, 50, "brown", 1, "black")
+circlee(385, -90, 1, 17, "grey", "green")
+circlee(415, -90, 1, 17, "grey", "green")
+rectangle(406, -110, 10, 40, "brown", 1, "black")
+circlee(400, -75, 1, 17, "grey", "green")
+circlee(600, -90, 1, 15, "grey", "green")
+circlee(630, -90, 1, 15, "grey", "green")
+rectangle(621, -110, 7, 40, "brown", 1, "black")
+circlee(615, -75, 1, 15, "grey", "green")
+circlee(670, -60, 1, 20, "grey", "green")
+rectangle(680, -110, 7, 50, "brown", 1, "black")
+#drawing white peaks
+triangle(380, 21, 50, "white", 3, "grey")
+triangle(480, -31, 30, "white", 3, "grey")
+triangle(590, 56, 40, "white", 3, "grey")
 
+# letter P
+rectangle(400, 200, 8, 60, 'light blue', 2, 'light blue')
+letter(408, 220, 1, 20, 'light blue', 'light blue')
+letter(408, 230, 1, 10, 'white', 'white')
 
-def main():
-    '''
-    Maim function.
-    :return:
-    '''
-    draw_cat()
-    draw_dog()
+# letter E
+rectangle(450, 200, 8, 60, 'light blue', 2, 'light blue')
+rectangle(458, 200, 24, 8, 'light blue', 2, 'light blue')
+rectangle(458, 226, 24, 8, 'light blue', 2, 'light blue')
+rectangle(458, 252, 24, 8, 'light blue', 2, 'light blue')
 
+# letter A correct
+t.rt(20)
+rectangle(506, 204, 8, 62, 'light blue', 2, 'light blue')
+t.goto(552, 230)
+t.rt(160)
+rectangle(540, 260, 8, 60, 'light blue', 2, 'light blue')
+t.pu()
+rectangle(520, 226, 24, 8, 'light blue', 2, 'light blue')
 
-if __name__ == '__main__':
-    main()
+# letter K
+rectangle(584, 200, 8, 60, 'light blue', 2, 'light blue')
+t.rt(45)
+rectangle(592, 230, -8, 35, 'light blue', 2, 'light blue')
+t.pu()
+t.goto(592, 230)
+t.rt(135)
+rectangle(592, 230, 8, 35, 'light blue', 2, 'light blue')
+
+t.done()
