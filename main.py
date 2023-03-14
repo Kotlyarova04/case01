@@ -62,6 +62,7 @@ def pear(x, y, pensizee, pencolor, fillcolor):
     t.end_fill()
     t.pu()
 
+    
 def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
     """
     :param x:
@@ -88,8 +89,10 @@ def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
     t.pu()
     t.setheading(0)
 
+    
 def triangle(x, y, a, fillcolor, pensizee, pencolour):
     """
+    Function for drawing a triangle.
     :param x:
     :param y:
     :param a:
