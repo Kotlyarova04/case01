@@ -1,23 +1,24 @@
-'''
+"""
 Dreamteam:
 Kotlyarova Polina
 Rafaevich Vita
 Leonov Kirill
-'''
+"""
 
-# import reguired modules
+# Import reguired modules.
 import turtle as t
 import math
 
-# used functions
+# Used functions.
 def pear(x, y, pensizee, pencolor, fillcolor):
     """
-    :param x:
-    :param y:
-    :param pensizee:
-    :param pencolor:
-    :param fillcolor:
-    :return:
+    Function for drawing a pear.
+    :param x: first coordinate of the start of drawing pear
+    :param y: second coordinate of the start of drawing pear
+    :param pensizee: contour width
+    :param pencolor: colour of the contour
+    :param fillcolor: pear fillcolor
+    :return: None
     """
     t.color(pencolor, fillcolor)
     t.pensize(pensizee)
@@ -64,14 +65,15 @@ def pear(x, y, pensizee, pencolor, fillcolor):
 
 def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
     """
-    :param x:
-    :param y:
-    :param a:
-    :param b:
-    :param fillcolor:
-    :param pensizee:
-    :param pencolour:
-    :return:
+    Function for drawing a rhomb.
+    :param x: first coordinate of the start of drawing rhomb
+    :param y: second coordinate of the start of drawing rhomb
+    :param a: length of the first side of the rhomb
+    :param b: length of the second side of the rhomb
+    :param fillcolor: rhomb fillcolor
+    :param pensizee: contour width
+    :param pencolour: colour of the contour
+    :return: None
     """
     t.goto(x, y)
     t.color(pencolour, fillcolor)
@@ -90,11 +92,14 @@ def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
 
 def triangle(x, y, a, fillcolor, pensizee, pencolour):
     """
-    :param x:
-    :param fillcolor:
-    :param pensizee:
-    :param pencolour:
-    :return:
+    This function for drawing the right triangle.
+    :param a: length of the side of the triangle
+    :param y: second coordinate of the start of drawing triangle
+    :param x: first coordinate of the start of drawing rectangle
+    :param fillcolor: triangle fillcolor
+    :param pensizee: contour width
+    :param pencolour: colour of the contour
+    :return: None
     """
     t.pu()
     t.goto(x, y)
@@ -113,13 +118,13 @@ def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
     """
     Function for drawing a rectangle.
     :param x: first coordinate of the start of drawing rectangle
-    :param y:
-    :param a:
-    :param b:
-    :param fillcolor:
-    :param pensizee:
-    :param pencolour:
-    :return:
+    :param y: second coordinate of the start of drawing triangle
+    :param a: length of the first side of the rectangle
+    :param b: length of the second side
+    :param fillcolor: rectangle fillcolor
+    :param pensizee: contour width
+    :param pencolour: colour of the contour
+    :return: None
     """
     t.goto(x, y)
     t.color(pencolour, fillcolor)
@@ -138,15 +143,13 @@ def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
 def circlee(x, y, pensizee, r, pencolor, fillcolor):
     """
     This function draws a circle.
-    :param y:
-    :param x:
-    :param pensizee:
-    :param r:
-    :param pencolor:
-    :param fillcolor:
-    :return:
-
-
+    :param x: first coordinate of the start of drawing circle
+    :param y: second coordinate of the start of drawing circle
+    :param pensizee: contour width
+    :param r: radius of circle
+    :param pencolor: colour of the contour
+    :param fillcolor: circle fillcolor
+    :return: None
     """
     t.goto(x, y)
     t.pd()
@@ -160,14 +163,14 @@ def circlee(x, y, pensizee, r, pencolor, fillcolor):
 
 def smile(x, y, pensizee, r, pencolor):
     """
-    :param x:
-    :param y:
-    :param pensizee:
-    :param r:
-    :param pencolor:
-    :return:
+    This function draws a smile in the form of a semicircle.
+    :param x: first coordinate of the start of drawing smile
+    :param y: second coordinate of the start of drawing smile
+    :param pensizee: contour width
+    :param r: radius of smile
+    :param pencolor: colour of the contour
+    :return: None
     """
-
     t.goto(x, y)
     t.pd()
     t.pensize(pensizee)
@@ -175,17 +178,17 @@ def smile(x, y, pensizee, r, pencolor):
     t.circle(r, 180)
     t.pu()
 
-def letter(x, y, pensizee, r, pencolor, fillcolor):
+def semicircle(x, y, pensizee, r, pencolor, fillcolor):
     """
-    :param fillcolor:
-    :param x:
-    :param y:
-    :param pensizee:
-    :param r:
-    :param pencolor:
-    :return:
+    This function draws a shaded semicircle.
+    :param x: first coordinate of the start of drawing semicircle
+    :param y: second coordinate of the start of drawing semicircle
+    :param r: radius of semicircle
+    :param pensizee: contour width
+    :param fillcolor: semicircle fillcolor
+    :param pencolor: colour of the contour
+    :return: None
     """
-
     t.goto(x, y)
     t.pd()
     t.pensize(pensizee)
@@ -197,13 +200,13 @@ def letter(x, y, pensizee, r, pencolor, fillcolor):
     t.lt(180)
 
 def ellipsoid(bigrad,littlerad,deg):
-    '''
+    """
     This function draws an ellips.
     :param bigrad: radius along the OX axis
     :param littlerad: radius along the OY axis
     :param deg: ellipse sector angle (=360 if we want to draw a full ellipse)
     :return: None
-    '''
+    """
     dx = t.xcor()
     dy = t.ycor()
     for i in range(deg):
@@ -213,7 +216,7 @@ def ellipsoid(bigrad,littlerad,deg):
         t.goto(x,y)
 
 def pattern(change1, change2, change3, change4, change5, standard):
-    '''
+    """
     This function draws half of the Python logo, and with opposite (in sign) change-arguments, draws the other half.
     :param change1: x-radius of ellipse
     :param change2: y-radius of ellipse
@@ -222,7 +225,7 @@ def pattern(change1, change2, change3, change4, change5, standard):
     :param change5: y-adjustment for drawing a circle
     :param standard: length of the center line before turns
     :return: None
-    '''
+    """
 
     t.begin_fill()
     t.pd()
@@ -263,12 +266,11 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.end_fill()
     t.pu()
 
-# general part
+# General part.
 t.setup(width=1.0, height=1.0)
 t.speed(0)
 t.pu()
 t.setheading(0)
-
 # Part of Kirill
 change1, change2, change3, change4, change5, standard = 60, 30, 120, 5, 85, 80
 
@@ -289,8 +291,8 @@ t.pu()
 
 # letter P
 rectangle(-650, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
-letter(-642, 220, 1, 20, 'DarkGoldenrod1', 'DarkGoldenrod1')
-letter(-642, 230, 1, 10, 'white', 'white')
+semicircle(-642, 220, 1, 20, 'DarkGoldenrod1', 'DarkGoldenrod1')
+semicircle(-642, 230, 1, 10, 'white', 'white')
 
 # letter Y
 rectangle(-596, 200, 8, 30, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
@@ -335,7 +337,8 @@ t.goto(-363, 200)
 t.end_fill()
 t.pu()
 
-# Part of Polina
+# Part of Polina.
+# Pear with smile, twig and leaf.
 pear(-3, 70, 5, "yellowgreen", "greenyellow")
 rectangle(0, 70, 5, 55, "brown", 3, "brown")
 rhomb(6, 120, 60, 60, "green", 3, "green")
@@ -344,14 +347,20 @@ circlee(19, -12, 2, 10, "black", "black")
 smile(-13, -90, 3, 15, "black")
 circlee(55, -55, 2, 5, "pink", 'pink')
 circlee(-45, -55, 2, 5, "pink", 'pink')
+
+# Letter P.
 rectangle(-130, 200, 8, 60, "goldenrod", 5, "goldenrod")
-letter(-120, 215, 1, 23, "goldenrod", "goldenrod")
-letter(-120, 230, 1, 10, "white", "white")
+semicircle(-120, 215, 1, 23, "goldenrod", "goldenrod")
+semicircle(-120, 230, 1, 10, "white", "white")
+
+# Letter E.
 rectangle(-70, 200, 8, 57, "goldenrod", 5, "goldenrod")
 rectangle(-70, 200, 45, 8, "goldenrod", 5, "goldenrod")
 rectangle(-70, 225, 45, 8, "goldenrod", 5, "goldenrod")
 rectangle(-70, 250, 45, 8, "goldenrod", 5, "goldenrod")
 t.setheading(65)
+
+# Letter A.
 rectangle(10, 200, 65, 8, "goldenrod", 5, "goldenrod")
 t.setheading(210)
 rectangle(35, 260, 8, 65, "goldenrod", 5, "goldenrod")
@@ -359,18 +368,21 @@ t.setheading(0)
 rectangle(20, 220, 30, 8, "goldenrod", 5, "goldenrod")
 t.setheading(0)
 rectangle(95, 200, 8, 60, "goldenrod", 5, "goldenrod")
-letter(105, 220, 1, 21, "goldenrod", "goldenrod")
-letter(105, 230, 1, 10, "white", "white")
+
+# Letter R.
+semicircle(105, 220, 1, 21, "goldenrod", "goldenrod")
+semicircle(105, 230, 1, 10, "white", "white")
 t.setheading(245)
 rectangle(105, 220, 8, 30, "goldenrod", 5, "goldenrod")
-t.mainloop()
 
 # Part of Vita
-#drawing mountains
+# Drawing mountains.
+t.pd()
 triangle(310, -100, 190, "light blue", 3, "grey")
 triangle(440, -100, 110, "light blue", 3, "grey")
 triangle(500, -100, 220, "light blue", 3, "grey")
-#drawing trees
+# Drawing trees.
+t.setheading(270)
 circlee(330, -60, 1, 20, "grey", "green")
 rectangle(340, -110, 7, 50, "brown", 1, "black")
 circlee(385, -90, 1, 17, "grey", "green")
@@ -383,15 +395,15 @@ rectangle(621, -110, 7, 40, "brown", 1, "black")
 circlee(615, -75, 1, 15, "grey", "green")
 circlee(670, -60, 1, 20, "grey", "green")
 rectangle(680, -110, 7, 50, "brown", 1, "black")
-#drawing white peaks
+# Drawing white peaks.
 triangle(380, 21, 50, "white", 3, "grey")
 triangle(480, -31, 30, "white", 3, "grey")
 triangle(590, 56, 40, "white", 3, "grey")
 
 # letter P
 rectangle(400, 200, 8, 60, 'light blue', 2, 'light blue')
-letter(408, 220, 1, 20, 'light blue', 'light blue')
-letter(408, 230, 1, 10, 'white', 'white')
+semicircle(408, 220, 1, 20, 'light blue', 'light blue')
+semicircle(408, 230, 1, 10, 'white', 'white')
 
 # letter E
 rectangle(450, 200, 8, 60, 'light blue', 2, 'light blue')
