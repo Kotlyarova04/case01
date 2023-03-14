@@ -91,6 +91,8 @@ def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
 def triangle(x, y, a, fillcolor, pensizee, pencolour):
     """
     :param x:
+    :param y:
+    :param a:
     :param fillcolor:
     :param pensizee:
     :param pencolour:
@@ -108,6 +110,7 @@ def triangle(x, y, a, fillcolor, pensizee, pencolour):
     t.end_fill()
     t.pu()
     t.setheading(0)
+
 
 def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
     """
@@ -366,11 +369,11 @@ rectangle(105, 220, 8, 30, "goldenrod", 5, "goldenrod")
 t.mainloop()
 
 # Part of Vita
-#drawing mountains
+# Drawing mountains.
 triangle(310, -100, 190, "light blue", 3, "grey")
 triangle(440, -100, 110, "light blue", 3, "grey")
 triangle(500, -100, 220, "light blue", 3, "grey")
-#drawing trees
+# Drawing trees.
 circlee(330, -60, 1, 20, "grey", "green")
 rectangle(340, -110, 7, 50, "brown", 1, "black")
 circlee(385, -90, 1, 17, "grey", "green")
@@ -383,23 +386,23 @@ rectangle(621, -110, 7, 40, "brown", 1, "black")
 circlee(615, -75, 1, 15, "grey", "green")
 circlee(670, -60, 1, 20, "grey", "green")
 rectangle(680, -110, 7, 50, "brown", 1, "black")
-#drawing white peaks
+# Drawing white peaks.
 triangle(380, 21, 50, "white", 3, "grey")
 triangle(480, -31, 30, "white", 3, "grey")
 triangle(590, 56, 40, "white", 3, "grey")
 
-# letter P
+# Letter P.
 rectangle(400, 200, 8, 60, 'light blue', 2, 'light blue')
 letter(408, 220, 1, 20, 'light blue', 'light blue')
 letter(408, 230, 1, 10, 'white', 'white')
 
-# letter E
+# Letter E.
 rectangle(450, 200, 8, 60, 'light blue', 2, 'light blue')
 rectangle(458, 200, 24, 8, 'light blue', 2, 'light blue')
 rectangle(458, 226, 24, 8, 'light blue', 2, 'light blue')
 rectangle(458, 252, 24, 8, 'light blue', 2, 'light blue')
 
-# letter A correct
+# Letter A.
 t.rt(20)
 rectangle(506, 204, 8, 62, 'light blue', 2, 'light blue')
 t.goto(552, 230)
@@ -408,7 +411,7 @@ rectangle(540, 260, 8, 60, 'light blue', 2, 'light blue')
 t.pu()
 rectangle(520, 226, 24, 8, 'light blue', 2, 'light blue')
 
-# letter K
+# Letter K.
 rectangle(584, 200, 8, 60, 'light blue', 2, 'light blue')
 t.rt(45)
 rectangle(592, 230, -8, 35, 'light blue', 2, 'light blue')
@@ -416,5 +419,4 @@ t.pu()
 t.goto(592, 230)
 t.rt(135)
 rectangle(592, 230, 8, 35, 'light blue', 2, 'light blue')
-
 t.done()
