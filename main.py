@@ -130,6 +130,7 @@ def rectangle(x, y, a, b, fillcolor, pensizee, pencolour):
     :param pencolour: colour of the contour
     :return: None
     """
+    t.pu()
     t.goto(x, y)
     t.color(pencolour, fillcolor)
     t.pensize(pensizee)
@@ -156,6 +157,7 @@ def circlee(x, y, pensizee, r, pencolor, fillcolor):
     :param fillcolor: circle fillcolor
     :return: None
     """
+    t.pu()
     t.goto(x, y)
     t.pd()
     t.rt(45)
@@ -165,6 +167,7 @@ def circlee(x, y, pensizee, r, pencolor, fillcolor):
     t.circle(r)
     t.pu()
     t.end_fill()
+    t.setheading(0)
 
 
 def smile(x, y, pensizee, r, pencolor):
@@ -239,13 +242,13 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.begin_fill()
     t.pd()
     t.fd(standard)
-    t.circle(standard//4,90)
+    t.circle(standard//4, 90)
     t.fd(standard)
     t.pu()
     t.goto(t.xcor() - change1, t.ycor() - change2)
     t.pd()
 
-    ellipsoid(change1,change2,270)
+    ellipsoid(change1, change2, 270)
     t.rt(180)
     t.fd(abs(change2))
     t.lt(90)
@@ -255,19 +258,19 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.rt(90)
     t.fd(abs(change1) + 40)
     t.pu()
-    t.goto(t.xcor(),t.ycor() - change3)
+    t.goto(t.xcor(), t.ycor() - change3)
     t.pd()
 
-    ellipsoid(change2,change1,360)
+    ellipsoid(change2, change1, 360)
     t.lt(180)
     t.fd(standard//8*3)
     t.lt(90)
     t.fd(standard//8*3)
-    t.circle(-standard//8*3,90)
+    t.circle(-standard//8*3, 90)
     t.end_fill()
     t.pu()
 
-    t.goto(t.xcor() + change4,t.ycor() + change5)
+    t.goto(t.xcor() + change4, t.ycor() + change5)
     t.pd()
     t.fillcolor('white')
     t.begin_fill()
@@ -277,14 +280,14 @@ def pattern(change1, change2, change3, change4, change5, standard):
 
 
 # General part.
-t.setup(width = 1.0, height = 1.0)
+t.setup(width=1.0, height=1.0)
 t.speed(0)
 t.pu()
 t.setheading(0)
-# Part of Kirill
+# Part of Kirill.
 change1, change2, change3, change4, change5, standard = 60, 30, 120, 5, 85, 80
 
-t.goto(-550,5)
+t.goto(-550, 5)
 t.pensize(2)
 t.pencolor('Cornflowerblue')
 t.fillcolor('Cornflowerblue')
@@ -299,30 +302,30 @@ pattern(-change1, -change2, -change3, -change4, -change5, standard)
 t.setheading(0)
 t.pu()
 
-# letter P
+# Letter P.
 rectangle(-650, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 semicircle(-642, 220, 1, 20, 'DarkGoldenrod1', 'DarkGoldenrod1')
 semicircle(-642, 230, 1, 10, 'white', 'white')
 
-# letter Y
+# Letter Y.
 rectangle(-596, 200, 8, 30, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(30)
 rectangle(-588, 230, -8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.rt(30)
 rectangle(-596, 230, 8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
-# letter T
+# Letter T.
 rectangle(-542, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(90)
 rectangle(-518, 260, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
-# letter H
+# Letter H.
 rectangle(-504, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 rectangle(-472, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(90)
 rectangle(-464, 234, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 
-# letter O
+# Letter O.
 t.goto(-430, 200)
 t.begin_fill()
 t.pd()
@@ -335,7 +338,7 @@ ellipsoid(10, 20, 360)
 t.end_fill()
 t.pu()
 
-# letter N
+# Letter N.
 rectangle(-395, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 rectangle(-363, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.begin_fill()
@@ -353,7 +356,8 @@ pear(-3, 70, 5, "yellowgreen", "greenyellow")
 rectangle(0, 70, 5, 55, "brown", 3, "brown")
 rhomb(6, 120, 60, 60, "green", 3, "green")
 circlee(-30, -20, 2, 10, "black", "black")
-circlee(19, -12, 2, 10, "black", "black")
+circlee(19, -20, 2, 10, "black", "black")
+t.rt(90)
 smile(-13, -90, 3, 15, "black")
 circlee(55, -55, 2, 5, "pink", 'pink')
 circlee(-45, -55, 2, 5, "pink", 'pink')
@@ -392,9 +396,7 @@ triangle(310, -100, 190, "light blue", 3, "grey")
 triangle(440, -100, 110, "light blue", 3, "grey")
 triangle(500, -100, 220, "light blue", 3, "grey")
 # Drawing trees.
-t.rt(45)
 circlee(330, -60, 1, 20, "grey", "green")
-t.setheading(180)
 rectangle(340, -110, 7, 50, "brown", 1, "black")
 circlee(385, -90, 1, 17, "grey", "green")
 circlee(415, -90, 1, 17, "grey", "green")
