@@ -1,8 +1,8 @@
 """
 Dreamteam:
 Kotlyarova Polina: 89/100
-Rafaevich Vita:
-Leonov Kirill:
+Rafaevich Vita: 80/100
+Leonov Kirill: 95/100
 """
 
 # Import reguired modules.
