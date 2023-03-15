@@ -1,6 +1,6 @@
 """
 Dreamteam:
-Kotlyarova Polina:
+Kotlyarova Polina: 89/100
 Rafaevich Vita:
 Leonov Kirill:
 """
@@ -428,4 +428,5 @@ t.pu()
 t.goto(592, 230)
 t.rt(135)
 rectangle(592, 230, 8, 35, 'light blue', 2, 'light blue')
+
 t.done()
