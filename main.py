@@ -1,8 +1,8 @@
 """
 Dreamteam:
-Kotlyarova Polina
-Rafaevich Vita
-Leonov Kirill
+Kotlyarova Polina:
+Rafaevich Vita:
+Leonov Kirill:
 """
 
 # Import reguired modules.
@@ -65,16 +65,16 @@ def pear(x, y, pensizee, pencolor, fillcolor):
     t.pu()
 
 
-def rhomb(x, y, a, b, fillcolor, pensizee, pencolour):
+def rombus(x, y, a, b, fillcolor, pensizee, pencolour):
     """
-    Function for drawing a rhomb.
-    :param x: first coordinate of the start of drawing rhomb
-    :param y: second coordinate of the start of drawing rhomb
-    :param a: length of the first side of the rhomb
-    :param b: length of the second side of the rhomb
-    :param fillcolor: rhomb fillcolor
+    Function for drawing a rombus.
+    :param x: first coordinate of the start of drawing rombus
+    :param y: second coordinate of the start of drawing rombus
+    :param a: length of the first side of the rombus
+    :param b: length of the second side of the rombus
     :param pensizee: contour width
     :param pencolour: colour of the contour
+    :param fillcolor: rombus fillcolor
     :return: None
     """
     t.goto(x, y)
@@ -227,14 +227,14 @@ def ellipsoid(bigrad, littlerad, deg):
         t.goto(x, y)
 
 
-def pattern(change1, change2, change3, change4, change5, standard):
+def pattern(change_1, change_2, change_3, change_4, change_5, standard):
     """
     This function draws half of the Python logo, and with opposite (in sign) change-arguments, draws the other half.
-    :param change1: x-radius of ellipse
-    :param change2: y-radius of ellipse
-    :param change3: x-diameter of ellipse
-    :param change4: x-adjustment for drawing a circle
-    :param change5: y-adjustment for drawing a circle
+    :param change_1: x-radius of ellipse
+    :param change_2: y-radius of ellipse
+    :param change_3: x-diameter of ellipse
+    :param change_4: x-adjustment for drawing a circle
+    :param change_5: y-adjustment for drawing a circle
     :param standard: length of the center line before turns
     :return: None
     """
@@ -245,23 +245,23 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.circle(standard//4, 90)
     t.fd(standard)
     t.pu()
-    t.goto(t.xcor() - change1, t.ycor() - change2)
+    t.goto(t.xcor() - change_1, t.ycor() - change_2)
     t.pd()
 
-    ellipsoid(change1, change2, 270)
+    ellipsoid(change_1, change_2, 270)
     t.rt(180)
-    t.fd(abs(change2))
+    t.fd(abs(change_2))
     t.lt(90)
-    t.fd(abs(change1))
+    t.fd(abs(change_1))
     t.rt(90)
     t.fd(standard//8)
     t.rt(90)
-    t.fd(abs(change1) + 40)
+    t.fd(abs(change_1) + 40)
     t.pu()
-    t.goto(t.xcor(), t.ycor() - change3)
+    t.goto(t.xcor(), t.ycor() - change_3)
     t.pd()
 
-    ellipsoid(change2, change1, 360)
+    ellipsoid(change_2, change_1, 360)
     t.lt(180)
     t.fd(standard//8*3)
     t.lt(90)
@@ -270,7 +270,7 @@ def pattern(change1, change2, change3, change4, change5, standard):
     t.end_fill()
     t.pu()
 
-    t.goto(t.xcor() + change4, t.ycor() + change5)
+    t.goto(t.xcor() + change_4, t.ycor() + change_5)
     t.pd()
     t.fillcolor('white')
     t.begin_fill()
@@ -284,47 +284,42 @@ t.setup(width=1.0, height=1.0)
 t.speed(0)
 t.pu()
 t.setheading(0)
-# Part of Kirill.
-change1, change2, change3, change4, change5, standard = 60, 30, 120, 5, 85, 80
 
+# Kirill's part.
+change_1, change_2, change_3, change_4, change_5, standard = 60, 30, 120, 5, 85, 80
 t.goto(-550, 5)
 t.pensize(2)
 t.pencolor('Cornflowerblue')
 t.fillcolor('Cornflowerblue')
 
-pattern(change1, change2, change3, change4, change5, standard)
+pattern(change_1, change_2, change_3, change_4, change_5, standard)
 t.goto(t.xcor() + 75, t.ycor() - 95)
 t.setheading(180)
 
 t.pencolor('DarkGoldenrod1')
 t.fillcolor('DarkGoldenrod1')
-pattern(-change1, -change2, -change3, -change4, -change5, standard)
+pattern(-change_1, -change_2, -change_3, -change_4, -change_5, standard)
 t.setheading(0)
 t.pu()
-
 # Letter P.
 rectangle(-650, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 semicircle(-642, 220, 1, 20, 'DarkGoldenrod1', 'DarkGoldenrod1')
 semicircle(-642, 230, 1, 10, 'white', 'white')
-
 # Letter Y.
 rectangle(-596, 200, 8, 30, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(30)
 rectangle(-588, 230, -8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.rt(30)
 rectangle(-596, 230, 8, 35, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
-
 # Letter T.
 rectangle(-542, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(90)
 rectangle(-518, 260, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
-
 # Letter H.
 rectangle(-504, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 rectangle(-472, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 t.lt(90)
 rectangle(-464, 234, -8, 40, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
-
 # Letter O.
 t.goto(-430, 200)
 t.begin_fill()
@@ -337,7 +332,6 @@ t.begin_fill()
 ellipsoid(10, 20, 360)
 t.end_fill()
 t.pu()
-
 # Letter N.
 rectangle(-395, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
 rectangle(-363, 200, 8, 60, 'DarkGoldenrod1', 2, 'DarkGoldenrod1')
@@ -350,30 +344,27 @@ t.goto(-363, 200)
 t.end_fill()
 t.pu()
 
-# Part of Polina.
+# Polina's part.
 # Pear with smile, twig and leaf.
 pear(-3, 70, 5, "yellowgreen", "greenyellow")
 rectangle(0, 70, 5, 55, "brown", 3, "brown")
-rhomb(6, 120, 60, 60, "green", 3, "green")
+rombus(6, 120, 60, 60, "green", 3, "green")
 circlee(-30, -20, 2, 10, "black", "black")
 circlee(19, -20, 2, 10, "black", "black")
 t.rt(90)
 smile(-13, -90, 3, 15, "black")
 circlee(55, -55, 2, 5, "pink", 'pink')
 circlee(-45, -55, 2, 5, "pink", 'pink')
-
 # Letter P.
 rectangle(-130, 200, 8, 60, "goldenrod", 5, "goldenrod")
 semicircle(-120, 215, 1, 23, "goldenrod", "goldenrod")
 semicircle(-120, 230, 1, 10, "white", "white")
-
 # Letter E.
 rectangle(-70, 200, 8, 57, "goldenrod", 5, "goldenrod")
 rectangle(-70, 200, 45, 8, "goldenrod", 5, "goldenrod")
 rectangle(-70, 225, 45, 8, "goldenrod", 5, "goldenrod")
 rectangle(-70, 250, 45, 8, "goldenrod", 5, "goldenrod")
 t.setheading(65)
-
 # Letter A.
 rectangle(10, 200, 65, 8, "goldenrod", 5, "goldenrod")
 t.setheading(210)
@@ -382,14 +373,13 @@ t.setheading(0)
 rectangle(20, 220, 30, 8, "goldenrod", 5, "goldenrod")
 t.setheading(0)
 rectangle(95, 200, 8, 60, "goldenrod", 5, "goldenrod")
-
 # Letter R.
 semicircle(105, 220, 1, 21, "goldenrod", "goldenrod")
 semicircle(105, 230, 1, 10, "white", "white")
 t.setheading(245)
 rectangle(105, 220, 8, 30, "goldenrod", 5, "goldenrod")
 
-# Part of Vita
+# Vita's part.
 # Drawing mountains.
 t.pd()
 triangle(310, -100, 190, "light blue", 3, "grey")
@@ -417,13 +407,11 @@ triangle(590, 56, 40, "white", 3, "grey")
 rectangle(400, 200, 8, 60, 'light blue', 2, 'light blue')
 semicircle(408, 220, 1, 20, 'light blue', 'light blue')
 semicircle(408, 230, 1, 10, 'white', 'white')
-
 # Letter E.
 rectangle(450, 200, 8, 60, 'light blue', 2, 'light blue')
 rectangle(458, 200, 24, 8, 'light blue', 2, 'light blue')
 rectangle(458, 226, 24, 8, 'light blue', 2, 'light blue')
 rectangle(458, 252, 24, 8, 'light blue', 2, 'light blue')
-
 # Letter A.
 t.rt(20)
 rectangle(506, 204, 8, 62, 'light blue', 2, 'light blue')
@@ -432,7 +420,6 @@ t.rt(160)
 rectangle(540, 260, 8, 60, 'light blue', 2, 'light blue')
 t.pu()
 rectangle(520, 226, 24, 8, 'light blue', 2, 'light blue')
-
 # Letter K.
 rectangle(584, 200, 8, 60, 'light blue', 2, 'light blue')
 t.rt(45)
